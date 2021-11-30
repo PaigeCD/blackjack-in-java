@@ -18,7 +18,7 @@ public class PlayBlackjack {
                 // Makes sure the entered bet is valid
                 if (bet < 0 || bet > balance) {
                     System.out.println("Invalid bet!");
-                    System.out.println("Your bet must be between 1 and " + balance + ". (Enter 0 to quit playing.)");
+                    System.out.println("Your bet must be between 1 and " + balance + ".");
                 }
              } while (bet < 0 || bet > balance);
              if (bet == 0)
@@ -34,10 +34,8 @@ public class PlayBlackjack {
                 System.out.println("You have no money left. Thanks for playing!");
                 break;
              }
-         }
-         if (balance == 0){
-           System.out.println("");
-         } else {
+         } // ends while true that represents game play
+         if (balance != 0){
            System.out.println("");
            System.out.println("You're leaving with $" + balance + ". Congrats!");
          }
@@ -75,7 +73,7 @@ public class PlayBlackjack {
               System.out.println("--------------------------------------------------");
               return true;
          }
-         // Case in which niether dealer nor user begin with a Blackjack
+         // Case in which neither dealer nor user begin with a Blackjack
          while (true) {
            System.out.println("--------------------------------------------------");
               System.out.println("Your cards are:");
